@@ -12,7 +12,7 @@ var counter = 0;
 var url = "https://www.bloomberg.com/markets2/api/datastrip/THB%3ACUR%2CUSD%3ACUR%2CMYR%3ACUR?locale=en&customTickerList=true"
 
 
-var listener = app.listen(9000, function() {
+var listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
