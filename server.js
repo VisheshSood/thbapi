@@ -47,7 +47,7 @@ function doStuff() {
           // final.change = result.body[0].priceChange1Day;
           // final.percent = result.body[0].percentChange1Day;
       }
-      // console.log(final);
+      console.log(final);
   })
   return final;
 }
