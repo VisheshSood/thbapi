@@ -1,0 +1,30 @@
+{
+  "name": "THB-API",
+  "version": "1.0.1",
+  "description": "A simple Node API for getting coronavirus cases from scraped information.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^0.22.0",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "got": "^10.6.0",
+    "node-cron": "^2.0.3",
+    "openurl": "^1.1.1",
+    "quick.db": "^7.0.0-b22",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "url": "https://github.com/VisheshSood/thbapi"
+  },
+  "license": "MIT",
+  "keywords": [
+    "API",
+    "coronavirus",
+    "covid"
+  ]
+}
