@@ -9,10 +9,10 @@ var final = [];
 
 var counter = 0;
 
-var url = "https://www.bloomberg.com/markets2/api/datastrip/THB%3ACUR%2CUSD%3ACUR%2CMYR%3ACUR?locale=en&customTickerList=true"
+var url = "https://www.bloomberg.com/markets2/api/datastrip/USDTHB%3ACUR"
 
 
-var listener = app.listen(process.env.PORT, function() {
+var listener = app.listen(80, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", '*');
     res.header("Access-Control-Allow-Credentials", true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+    res.header("Access-Control-Allow-Headers", 'Authorization, Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
     next();
 });
 
@@ -42,7 +42,6 @@ function doStuff() {
       url: url,
       json: true
   }, function (error, response, body) {
-
       if (!error && response.statusCode === 200) {
           // console.log(response) // Print the json response
           var result = JSON.parse(JSON.stringify(response));
