@@ -12,7 +12,7 @@ var counter = 0;
 var url = "https://www.bloomberg.com/markets2/api/datastrip/USDTHB%3ACUR"
 
 
-var listener = app.listen(80, function() {
+var listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
@@ -24,7 +24,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get("/all/", async function(req, res) {
+app.get("/", async function(req, res) {
   counter++;
   console.log(counter);
   console.log(req.headers);
