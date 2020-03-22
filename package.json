@@ -18,9 +18,6 @@
     "quick.db": "^7.0.0-b22",
     "request": "^2.88.2"
   },
-  "scripts": {
-    "start": "node server.js"
-  },
   "repository": {
     "url": "https://github.com/VisheshSood/thbapi"
   },

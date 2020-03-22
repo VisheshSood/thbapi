@@ -27,6 +27,7 @@ app.use(function(req, res, next) {
 app.get("/all/", async function(req, res) {
   counter++;
   console.log(counter);
+  console.log(req.headers);
   res.send(doStuff());
 });
 
@@ -36,7 +37,30 @@ function doStuff() {
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
-    'upgrade-insecure-requests': '1',
+    'connection': 'keep-alive',
+    // 'content-length': '906',
+    'Content-Security-Policy': 'frame-ancestors \'self\'',
+    'Content-Security-Policy': 'upgrade-insecure-requests',
+    'Content-Type': 'application/json; charset=utf-8',
+    'ETag': 'W/"89a-KBsWsjJGIThVti3Qa/eLJczRY+c"',
+    'Server': 'nginx',
+    'Strict-Transport-Security': 'max-age=15552000; includeSubDomains',
+    'Vary': 'Origin, Accept-Encoding',
+    'X-Cache': 'HIT',
+    'X-Cache-Hits': '1',
+    'Accept-Ranges':'bytes',
+    'X-Content-Security-Policy':'frame-ancestors \'self\'',
+    'X-Content-Type-Options':'nosniff',
+    'X-DNS-Prefetch-Control':'on',
+    'X-Download-Options':'noopen',
+    'X-Frame-Options':'SAMEORIGIN',
+    'X-Powered-By':'Express',
+    'X-WebKit-CSP':'frame-ancestors \'self\'',
+    'X-XSS-Protection':'1; mode=block',
+    'Fastly-Restarts':'1',
+    'Content-Encoding':'gzip',
+    'X-Served-By':'cache-sin18030-SIN',
+    'Age':'140',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
   },
       url: url,
@@ -52,7 +76,8 @@ function doStuff() {
           // final.change = result.body[0].priceChange1Day;
           // final.percent = result.body[0].percentChange1Day;
       }
-      console.log(final);
+      // console.log(final);
   })
+  
   return final;
 }
