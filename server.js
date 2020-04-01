@@ -38,7 +38,7 @@ function doStuff() {
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
     'connection': 'keep-alive',
-    'accept-encoding': 'gzip, deflate, br',
+    'accept-encoding': 'deflate, br',
     // 'content-length': '906',
     'Content-Security-Policy': 'frame-ancestors \'self\'',
     'Content-Security-Policy': 'upgrade-insecure-requests',
@@ -68,7 +68,7 @@ function doStuff() {
       json: true
   }, function (error, response, body) {
       if (!error && response.statusCode === 200) {
-          // console.log(response) // Print the json response
+          console.log(response) // Print the json response
           var result = JSON.parse(JSON.stringify(response));
           // console.log(result.body[0]);
           final = [];
