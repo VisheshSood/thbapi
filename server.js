@@ -38,6 +38,7 @@ function doStuff() {
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
     'connection': 'keep-alive',
+    'accept-encoding': 'gzip, deflate, br',
     // 'content-length': '906',
     'Content-Security-Policy': 'frame-ancestors \'self\'',
     'Content-Security-Policy': 'upgrade-insecure-requests',
